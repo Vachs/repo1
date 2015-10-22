@@ -1,10 +1,14 @@
 package com.example.kapitandupa.myapplication;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 /**
  * Created by Kapitan Dupa on 2015-10-22.
@@ -17,7 +21,11 @@ public class CreateAccount extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.acticity_create);
+        setContentView(R.layout.activity_create);
+
+        //IO
+        showID();
+        display();
 
     }
 
@@ -46,6 +54,30 @@ public class CreateAccount extends AppCompatActivity {
     public String getMyPhoneNumber(){
         return ((TelephonyManager) getSystemService(TELEPHONY_SERVICE)).getLine1Number();
     }
+
+    /* pokazuje numer telefonu */
+    public void showID(){
+        TextView text = (TextView) findViewById(R.id.textView3);
+        text.setText(getMyPhoneNumber());
+    }
+
+    /* brak polaczenia z internetm */
+    public boolean checkInternetConnection(){
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo =  cm.getActiveNetworkInfo();
+
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+    }
+
+    public void display(){
+        TextView txt = (TextView) findViewById(R.id.textView4);
+        if(checkInternetConnection()){
+            txt.setText("OK");
+        }else{
+            txt.setText("no");
+        }
+    }
+
 
 
 
