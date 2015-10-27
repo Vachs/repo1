@@ -1,4 +1,4 @@
-package com.example.kapitandupa.myapplication;
+package com.example.kapitandupa.myapplication.com.example.kapitandupa.shinning;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.kapitandupa.myapplication.R;
 
 
 public class MainActivity extends AppCompatActivity

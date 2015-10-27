@@ -20,9 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".com.example.kapitandupa.shinning.MainActivity"
             android:label="Create" />
-        <activity android:name=".CreateAccount" />
+        <activity android:name=".com.example.kapitandupa.shinning.CreateAccount" />
     </application>
 
 </manifest>

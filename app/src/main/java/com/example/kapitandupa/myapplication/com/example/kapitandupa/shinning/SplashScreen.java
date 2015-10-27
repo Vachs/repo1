@@ -1,9 +1,11 @@
-package com.example.kapitandupa.myapplication;
+package com.example.kapitandupa.myapplication.com.example.kapitandupa.shinning;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.kapitandupa.myapplication.R;
 
 /**
  * Created by Tomasz 22 October 2015
@@ -33,4 +35,6 @@ public class SplashScreen extends Activity {
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
+
+
 }

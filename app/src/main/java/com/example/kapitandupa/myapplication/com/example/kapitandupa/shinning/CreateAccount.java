@@ -1,4 +1,4 @@
-package com.example.kapitandupa.myapplication;
+package com.example.kapitandupa.myapplication.com.example.kapitandupa.shinning;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -9,6 +9,8 @@ import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.example.kapitandupa.myapplication.R;
 
 /**
  * Created by Kapitan Dupa on 2015-10-22.
